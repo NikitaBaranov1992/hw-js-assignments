@@ -1,21 +1,21 @@
 function increaseBalance(x, y) {
-  a = x + y;
-  return a;
+  x += y;
+  return x;
 }
 
 function decreaseBalance(x, y) {
-  a = x - y;
-  return a;
+  x -= y;
+  return x;
 }
 
 function divideBalanceByAccounts(x, y) {
-  a = x / y;
-  return a;
+  x /= y;
+  return x;
 }
 
 function getRestAfterDivision(x, y) {
-  a = x % y;
-  return a;
+  x %= y;
+  return x;
 }
 
 console.log(increaseBalance(3000, 700));
