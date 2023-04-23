@@ -17,7 +17,7 @@ let newHeight = 5;
 
 let newButton = new sendMessageButton(newWidth, newHeight);
 
-console.log(newButton.onClick());
+newButton.onClick();
 
 function testButton() {
   if (
