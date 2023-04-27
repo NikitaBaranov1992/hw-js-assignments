@@ -1,26 +1,48 @@
-// тут посчитал сумму, если число больше 1000. сделал функцию bigSumm
+//Соединение 3 массивов в один большой
 
-yearlyExpences1 = [
-  2500, 6000, 7000, 6000, 3, 9, 700, 8000, 655, 5700, 340, 5390,
+let expencesExamples = [
+  {
+    yearlyExpences: [
+      2500, 6000, 7000, 6000, 3, 9, 700, 8000, 655, 5700, 340, 5390,
+    ],
+  },
+  {
+    yearlyExpences: [
+      500, 1000, 90000, 80, 980, 9000, 10, 400, 3000, 250, 45000, 1200,
+    ],
+  },
+  {
+    yearlyExpences: [
+      20, 200, 8900, 3300, 2300, 1009, 1200, 2000, 670, 900, 900, 7000,
+    ],
+  },
 ];
-let sumFirst = 0;
 
-function bigSumm(yearlyExpences1) {
-  for (let i = 0; i < yearlyExpences1.length; i++) {
-    if (yearlyExpences1[i] > 1000) {
-      sumFirst += yearlyExpences1[i];
+let allExamples = [];
+for (let objectExpenses of expencesExamples) {
+  for (let valueExam of objectExpenses.yearlyExpences) {
+    allExamples.push(valueExam);
+  }
+}
+//console.log(allExamples);
+
+//функция по расчету суммы через for:
+let sumFirst = 0;
+function bigSumm() {
+  for (let i = 0; i < allExamples.length; i++) {
+    if (allExamples[i] > 1000) {
+      sumFirst += allExamples[i];
     }
   }
   return sumFirst;
 }
-console.log(bigSumm(yearlyExpences1));
+console.log(bigSumm());
 
-// Тут попытался через forEach отобрать только те цифры, которые больше 1000
-
-let exp = 0;
-const yearlyExpences2 = [
-  2500, 6000, 7000, 6000, 3, 9, 700, 8000, 655, 5700, 340, 5390,
-];
-yearlyExpences2.forEach((exp) => {
-  if (exp > 1000) console.log(exp);
+//через forEach:
+let summExp = 0;
+allExamples.forEach(function (exp) {
+  if (exp > 1000) {
+    summExp += exp;
+  }
 });
+console.log(summExp);
