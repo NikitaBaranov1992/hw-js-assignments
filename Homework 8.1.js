@@ -46,3 +46,7 @@ allExamples.forEach(function (exp) {
   }
 });
 console.log(summExp);
+
+sumFirst === summExp
+  ? console.log("Проверка завершена успешно")
+  : console.log("Проверка завершена ошибкой");
